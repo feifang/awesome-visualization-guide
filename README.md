@@ -16,7 +16,9 @@ High-level 的设计原则
 |8| 在可视分析中，信息展示的原则应该基于数据分析的思路和原则，而非根据市场需要或技术潮流 | 可视化设计；可视分析| 🔠 | - | IV | 0 | 9 |
 |9| 大数据量的可视化需要使用数据密度高的图表呈现（至少200个数/平方厘米）| 可视化设计；可视分析 | 🔢 | 该量化标准是2006年提出的，随着屏幕分辨率的发展，该标准应只增不减 | IV | 2 | 53 |
 |10| 通过检查视觉主体是否传达了数据主要信息，可以识别设计中是否引入了的视觉阻碍 | 视觉效果；可视化设计| 🔠 | 例如，如果最突出的视觉元素是图表的边框，没有传达任何信息，则说明边框造成了视觉阻碍 | IV | 2 | 62 |
-|11| 区分视觉层级，以便容纳更多数据，同时做到主次分明 | 统计图；可视化设计 | 🔠 | 例如，图表中不要所有线（边框底纹、数据折线等）的粗细都一样 | IV | 3 | 77 |
+|11| 区分视觉层级，能有效容纳更多数据，同时做到主次分明，避免视觉混乱 | 统计图；可视化设计 | 🔠 | 例如，图表中不要所有线（边框底纹、数据折线等）的粗细都一样；用不同的颜色区分层级等 | IV | 3 | 77 |
+|12| 在需要对比/比较的可视化中，视线范围内能展示的数据越多越好，以减轻视觉记忆的压力，提高比较的效率 | 可视化设计；可视分析 | 🔠 | 能放进一屏/一页最好放一起，避免滚动/翻页 | II | 2 | 50 |
+|13| 避免视觉混乱的关键在于使用能高效展示复杂数据的方法，而非一味地减少所展示的数据 | 可视化设计 | 🔠 | 数据量大不是造成混乱的原因，不良的设计才是；解决方案参考原则11 | II | 3 | 53 |
 
 
 ## Guidelines/Strategies 策略技巧
@@ -34,6 +36,7 @@ High-level 的设计原则
 |8| Sparkline 的周围不宜使用抢眼的粗边框，以免主次颠倒 | Sparkline；视觉效果；可视化设计 | 🔠 | - | IV | 2 | 62 |
 |9| Sparkline 的排布应参照文本排版原则 | Sparkline；可视化设计 | 🔠 | Sparkline 可视为文段中的“单词” | IV | 2 | 63 |
 |10| 用于可视分析的关系图的最佳实践：注重因果关系；使用尽可能多种数据进行深入的分析；给节点和连线添加标注；使用高效的设计；保障可信度（Credibility） | 关系图；可视分析；可视化设计 | 🔠 | 这里的关系图指广义的包含节点和连线的图表，可以是网络关系图、树、层级关系图等 | IV | 3 | 78 |
+|11| 表格边框设计最佳实践：能不用边框就不用；只有当列间距太小，列与列之间容易混淆时才使用边框竖线；使用较细、颜色较浅的边框线 | 表格；可视化设计 | 🔠 | 相关原则：No.11 | II | 3 | 55 |
 
 
 注：以上原则/技巧经过部分微调，使之更贴切或更易于理解，参考依据原文详见附录。有多处参考内容涉及同一条原则/技巧的，将在附录中补充，不在表格中逐一记录。
@@ -66,11 +69,13 @@ V. Tufte, Edward R., 1942- author. Seeing with Fresh Eyes : Meaning, Space, Data
 8. the principles of edvidence display are derived from the universal principles of analytical thinking -- and not from local customs, intellectual fashions, consumer convenience, marketing, or what the technologies of display happen to make available. The metaphore for evidence presentations is analytical thinking.
 9. High-resolution graphics (200 numbers per square centimiter, or 1200 per square inch) help describe, present, and understand really big data sets. By 2006, the median data-graphic published in Nature and Science presented > 1000 numbers.
 10. A good way to assesss a display for unintentional optical clutter is to ask "Do the prominent visual effects convey relevant content?"
-11. ... the classical design error of _equal line weight for all visual elements_.
+11. ... the classical design error of _equal line weight for all visual elements_ (IV | 3 | 77). Among the most powerful devices for reducing noise and enriching the content of displays is the technique of layering and separation, visually stratifying various aspects of the data (II | 3 | 53).
+12. If the visual task is contrast, comparison, and choice -- as so often it is -- then the more relevant information within eyespan, the better. Vacant, low-density displays, the dreaded posterization of data spread over pages and pages, require viewers to rely on visual memory -- a weak skill -- to make a contrast, a comparison, a choice.
+13. Confusion and clutter are failures of design, not attributes of information. And so the point is to find design strategies that reveal detail and complexity -- rather than fault the data for an excess of complication. Or, worse, to fault viewers for a lack of understanding. 
    
 ### For Guidelines/Strategies
 
-1. Choose an aspect ratio that centers the absolute values of the slopes of selected line segments on 45 degree (III-Ch1-P25); Variations in slopes are best detected when the slopes are around 45 degree（IV-Ch2-P60)
+1. Choose an aspect ratio that centers the absolute values of the slopes of selected line segments on 45 degree (III | 1 | 25); Variations in slopes are best detected when the slopes are around 45 degree（IV-Ch2-P60)
 2. economists agree that graphics depicting money over a period time should show inflation-adjusted (constant) monetary units
 3. Calming the grid down clarifies the imprisoned data, as in these cases (right and below) of statistical graphics, spreadsheet entries, and visual timetables.
 4. a code connects image and label: image->number->number->noun or, reading the other direction, noun->number->number->image...Such codes prevent us from seeing each part and its name right together, an efficient merger which assists our memory. In short, codes obstruct parallelism; replacing codes with direct labels unifies the information. Codes and keys are sometimes necessary for highly complex data (geological field maps, for example), or when there are a great many scattered elements (the photograph of 146 astronomers on the next page)
@@ -79,7 +84,8 @@ V. Tufte, Edward R., 1942- author. Seeing with Fresh Eyes : Meaning, Space, Data
 7. Closely spaced lines produce moiré vibration, usually at its worst when data-lines (the figure) and spaces (the ground) between data-lines are approximately equal in size, and also when figure and ground constrast strongly in color value.
 8. Areas surrounding data-lines may generate unintentional optical clutter. Strong frames produce melodramatic but content-diminishing visual effects.
 9. Just as sparklines are like _words_, so then distributions of sparklines on a page are like _sentences_ and _paragraphs_. The graphical idea here is make it _wordlike_ and _typographic_ -- an idea that leads to reasonable answers for most questions about sparkline arragements.
-10. This practical, workday diagram demonstrates excellent analytical practices for displays that use links and arrows to tie nouns together: timelines, trees, networks, organization charts, project management charts, and the like. These practices are: _Focus on causality_ ..., _Multiple sources and levels of data_ ..., _Annotated linking lines_ ..., _Annotated nouns_ ..., _Efficiency of design_ ..., _Credibility_ 
+10. This practical, workday diagram demonstrates excellent analytical practices for displays that use links and arrows to tie nouns together: timelines, trees, networks, organization charts, project management charts, and the like. These practices are: _Focus on causality_ ..., _Multiple sources and levels of data_ ..., _Annotated linking lines_ ..., _Annotated nouns_ ..., _Efficiency of design_ ..., _Credibility_
+11. The setting of tables, ... First, try to do without rules all together. They should be used only when they are necessary. Vertical rules are needed only when the space between columns is so narrow that mistakes will occur in reading without rules. Tables without vertical rules look better; thin rules are better than thick ones.
 
 ## Appendix 3 - Reading Materials 附录 3
 * [Principles of Graphical Excellence from E.R. Tufte](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/datapresentation/DataPresentation3.html) by Boston University School of Public Health
