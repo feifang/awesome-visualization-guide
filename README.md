@@ -1,5 +1,5 @@
 # awesome-visualization-guide
-🧾 A list of recommended guidelines and principles on data visualization, adapted from the works of visualization gurus such as Edward Tufte. 整理收集数据可视化设计原则（根据 Edward Tufte 等大师的著作总结、归纳而成，持续添加中）
+🧾 A non-exhaustive and in-progress list of guidelines and principles on data visualization, adapted from the works of visualization gurus such as Edward Tufte. 整理收集数据可视化设计原则（根据 Edward Tufte 等大师的著作总结、归纳而成，持续添加中）
 
 ## Principles 原则
 High-level 的设计原则
@@ -112,6 +112,8 @@ V. Tufte, Edward R., 1942- author. Seeing with Fresh Eyes : Meaning, Space, Data
 **[The Science of Visual Data Communication: What Works](https://doi.org/10.1177/15291006211051956)**
 > This report presents research-backed guidelines for creating powerful and intuitive visualizations oriented toward communicating data to students, coworkers, and the general public.
 
+**[Dataviz Accessibility Resources](https://github.com/dataviza11y/resources)**
+> A non-exhaustive and in-progress list of people and resources in Accessibility and Data Visualization
 
 More: 
 * [Principles of Graphical Excellence from E.R. Tufte](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/datapresentation/DataPresentation3.html) by Boston University School of Public Health
