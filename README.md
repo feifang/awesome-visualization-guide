@@ -108,6 +108,12 @@ V. Tufte, Edward R., 1942- author. Seeing with Fresh Eyes : Meaning, Space, Data
 20. Because of color-deficient vision, it is best to avoid making crucial data distinctions depend on the difference between red and green.
 
 ## Appendix 3 - Reading Materials 附录 3
+
+**[The Science of Visual Data Communication: What Works](https://doi.org/10.1177/15291006211051956)**
+> This report presents research-backed guidelines for creating powerful and intuitive visualizations oriented toward communicating data to students, coworkers, and the general public.
+
+
+More: 
 * [Principles of Graphical Excellence from E.R. Tufte](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/datapresentation/DataPresentation3.html) by Boston University School of Public Health
 
 
