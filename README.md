@@ -7,7 +7,7 @@ High-level 的设计原则
 | ID | Principle | Topic | Type | Note | Source | Chapter | Page |
 |--|--|--|--|--|--|--|--|
 |1| 记录可视化数据的来源及特征  | 统计图；可视化设计；可视分析 | 🔠 | - | III | 1 | 53 |
-|2| 注重引导读者在阅读时进行比较  | 统计图；可视化设计；可视分析 | 🔠 | - | III | 2 | 53 |
+|2| ⭐ 注重引导读者在阅读时进行比较  | 统计图；可视化设计；可视分析；Graphical Excellence | 🔠 | 亦提及于 (I \| 1 \| 13) | III | 2 | 53 |
 |3| 在图表中展示因果关系（原因如何导致结果），最好使用量化的方式  | 统计图；可视化设计；可视分析 | 🔠 | - | III | 2 | 53 |
 |4| 考虑问题自身的多个不同维度，尝试考虑不同的解释方法  | 统计图；可视化设计；可视分析 | 🔠 | - | III | 2 | 53 |
 |5| 在保障图表清晰有效的前提下，尽可能减小各视觉元素的差异（从而提高信息容量）- the smallest effective difference  | 统计图；可视化设计 | 🔠 | - | III | 4 | 73 |
@@ -19,6 +19,15 @@ High-level 的设计原则
 |11| 区分视觉层级，能有效容纳更多数据，同时做到主次分明，避免视觉混乱 | 统计图；可视化设计 | 🔠 | 例如，图表中不要所有线（边框底纹、数据折线等）的粗细都一样；用不同的颜色区分层级等 | IV | 3 | 77 |
 |12| 在需要对比/比较的可视化中，视线范围内能展示的数据越多越好，以减轻视觉记忆的压力，提高比较的效率 | 可视化设计；可视分析 | 🔠 | 能放进一屏/一页最好放一起，避免滚动/翻页 | II | 2 | 50 |
 |13| 避免视觉混乱的关键在于使用能高效展示复杂数据的方法，而非一味地减少所展示的数据 | 可视化设计 | 🔠 | 数据量大不是造成混乱的原因，不良的设计才是；解决方案参考原则11 | II | 3 | 53 |
+|14| ⭐ 有效呈现数据（Show the data） | 可视化设计；Graphical Excellence | 🔠 | - | I | 1 | 13 |
+|15| ⭐ 引导读者关注数据本身，而不是炫技 | 可视化设计；Graphical Excellence | 🔠 | - | I | 1 | 13 |
+|16| ⭐ 诚实地表现数据，避免歪曲数据内容 | 可视化设计；Graphical Excellence | 🔠 | 亦提及于 (I \| 1 \| 51) | I | 1 | 13 |
+|17| ⭐ 高效展示数据（用小空间展示大量数据） | 可视化设计；Graphical Excellence | 🔠 | - | I | 1 | 13 |
+|18| ⭐ 提供从概览到细节的多个层级的数据（Overview + Detail） | 可视化设计；Graphical Excellence | 🔠 | - | I | 1 | 13 |
+|19| ⭐ 具有明确的目标，例如描述现象、探索发现、作为装饰等 | 可视化设计；Graphical Excellence | 🔠 | - | I | 1 | 13 |
+|20| ⭐ 深度整合数据集的统计和描述性信息 | 可视化设计；Graphical Excellence | 🔠 | - | I | 1 | 13 |
+|21| 对于（小于20项的）小数据集，用表格展示通常比图表更好 | 可视化设计 | 🔢 | - | I | 2 | 56 |
+|22| 适当的装饰可以突出主题，但不能为了装饰效果扭曲数据 | 可视化设计 | 🔠 | - | I | 2 | 59 |
 
 
 ## Guidelines/Strategies 策略技巧
@@ -46,7 +55,7 @@ High-level 的设计原则
 |18| 设计色板的技巧是从自然界取材，因为对人眼比较熟悉和协调，更容易达到一种和谐、舒服的效果 | 色彩；可视化设计 | 🔠 | 尤其是代表天空和光影的蓝色、黄色、灰色等柔和的颜色 | II | 5 | 90 |
 |19| 在复杂的可视化中，为避免色彩间互相作用带来的影响，用颜色来表现某项数据时，最好用多一种视觉元素辅助 | 色彩；可视化设计 | 🔠 | 但也要注意保障清晰度，不过分冗余 | II | 5 | 92 |
 |20| 由于红绿色盲人群的存在，不宜用红色和绿色来表示数据的关键差异 | 色彩；可视化设计 | 🔠 | - | II | 5 | 93 |
-
+|21| 在时序可视化中加入空间数据，能有效提升表现力 | 时序可视化；可视化设计 | 🔠 | - | I | 1 | 40 |
 
 
 
@@ -82,7 +91,17 @@ V. Tufte, Edward R., 1942- author. Seeing with Fresh Eyes : Meaning, Space, Data
 10. A good way to assesss a display for unintentional optical clutter is to ask "Do the prominent visual effects convey relevant content?"
 11. ... the classical design error of _equal line weight for all visual elements_ (IV | 3 | 77). Among the most powerful devices for reducing noise and enriching the content of displays is the technique of layering and separation, visually stratifying various aspects of the data (II | 3 | 53).
 12. If the visual task is contrast, comparison, and choice -- as so often it is -- then the more relevant information within eyespan, the better. Vacant, low-density displays, the dreaded posterization of data spread over pages and pages, require viewers to rely on visual memory -- a weak skill -- to make a contrast, a comparison, a choice (II | 2 | 50). Comparisons must be enforced within the scope of the eyespan, a fundamental point occasionally forgotten in practice (II | 4 | 76). 
-13. Confusion and clutter are failures of design, not attributes of information. And so the point is to find design strategies that reveal detail and complexity -- rather than fault the data for an excess of complication. Or, worse, to fault viewers for a lack of understanding. 
+13. Confusion and clutter are failures of design, not attributes of information. And so the point is to find design strategies that reveal detail and complexity -- rather than fault the data for an excess of complication. Or, worse, to fault viewers for a lack of understanding.
+14. Graphical displays should show the data; induce viewer to think about the substance rather than about methodology, graphic design, the technology of graphic production, or something else; avoid distorting what the data have to say; present many numbers in a small space; make large data sets coherent; encourage the eye to compare different pieces of data; reveal the data at several levels of detail, from a broad overview to the fine structure; serve a reasonably clear purpose: description, exploration, tabulation, or decoration; be closely integrated with the statistical and verbal descriptions of a data set.
+15. (same as above)
+16. (same as above); And graphical excellence requires telling the truth about the data. (I | 1 | 51)
+17. (same as above)
+18. (same as above)
+19. (same as above)
+20. (same as above)
+21. Table usually outperform graphics in reporting on small data sets of 20 numbers or less.
+22. Sometimes decoration can help editorialize about the substance of the graphic. But it is wrong to distort the data measures -- the ink locating values of numbers -- in order to make an editorial comment or fit a decorative scheme.
+    
    
 ### For Guidelines/Strategies
 
@@ -106,6 +125,7 @@ V. Tufte, Edward R., 1942- author. Seeing with Fresh Eyes : Meaning, Space, Data
 18. What palette of colors should we choose to represent and illuminate information? A grand strategy is to _use colors found in nature_, especially those on the lighter side, such as blues, yellows, and grays of sky and shadow. Nature's colors are familiar and coherent, possessing a widely accepted harmony to the human eye -- and their source has a certain definitive authority. A palette of nature's colors help suppress production of garish and content-empty colorjunk.
 19. These perceived color shifts, while an infrequent threat to accuracy of reading in day-to-day information design, are surprising and vivid -- suggesting that color differences should not be relied upon as the sole method for sending a message admist a mosaic of complex and variable data (II | 5 | 92). Redundant and partially overlapping methods of data representation can yield a sturdy design, responding in one way or another to potential visual complication -- with, however, a resulting danger of fussy, cluttered, insecure, committee-style design. A crystalline, lucid redundancy will do (II | 5 | 93).
 20. Because of color-deficient vision, it is best to avoid making crucial data distinctions depend on the difference between red and green.
+21. An especially effective device for enhancing the explanatory power of time-series displays is to add spatial dimensions to the design of the graphic, so that the data are moving over space (in two or three dimensions) as well as over time.
 
 ## Appendix 3 - Reading Materials 附录 3
 
