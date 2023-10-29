@@ -28,6 +28,11 @@ High-level 的设计原则
 |20| ⭐ 深度整合数据集的统计和描述性信息 | 可视化设计；Graphical Excellence | 🔠 | - | I | 1 | 13 |
 |21| 对于（小于20项的）小数据集，用表格展示通常比图表更好 | 可视化设计 | 🔢 | - | I | 2 | 56 |
 |22| 适当的装饰可以突出主题，但不能为了装饰效果扭曲数据 | 可视化设计 | 🔠 | - | I | 2 | 59 |
+|23| 图形元素的实际尺寸应该与其所表示的数值成比例 | Graphical Integrity; 可视化设计 | 🔠 | - | I | 2 | 77 |
+|24| 应通过清晰、详尽的标注（labeling）来避免图表的误读和表达不明确的问题 | Graphical Integrity; 可视化设计 | 🔠 | - | I | 2 | 77 |
+|25| 保持图表中设计的一致性 | Graphical Integrity; 可视化设计 | 🔠 | 主要指数据映射方面，例如同一个指标在同一个坐标轴上的度量（scale）应该一致 | I | 2 | 77 |
+|26| 图表中用于表示数据的维度个数，不应超过数据实际维度（变量）的数量 | Graphical Integrity; 可视化设计 | 🔠 | 这里是一个比较严格的标准，主要是指不要用高维图形来表示低维数据，例如用面积（二维）表示一个数值型变量，否则容易形成夸大数据的视觉效果 | I | 2 | 77 |
+|27| 应提供数据的上下文（context） | Graphical Integrity; 可视化设计 | 🔠 | 与原则18相关，通常出现在时序数据，不要只给出很短一段时间的数值变化，缺乏比较的情况下容易得出偏颇的结论 | I | 2 | 77 |
 
 
 ## Guidelines/Strategies 策略技巧
@@ -36,7 +41,7 @@ High-level 的设计原则
 | ID | Guideline | Topic | Type | Note | Source | Chapter | Page |
 |--|--|--|--|--|--|--|--|
 |1| 选择合适的图表长宽比，使折线的斜率（绝对值）集中在45度附近  | 折线图 | 🔢 | 因为此时斜率的差异是最易于分辨的 | III | 1 | 25 |
-|2| 对于涉及金钱的时序图表，应展示经过通胀调整后的数值  | 统计图；可视化设计；可视分析 | 🔢 | - | III | 3 | 70 |
+|2| 对于涉及金钱的时序图表，应展示经过通胀调整后（deflated）的数值  | 统计图；可视化设计；可视分析 | 🔢 | 亦提及于 (I \| 2 \| 77) | III | 3 | 70 |
 |3| 弱化图表的网格、表格的边框（变浅、变细） | 统计图；表格；可视化设计 | 🔠 | 使之与背景的区别满足原则5，突出要展示的数据 | III | 4 | 74 |
 |4| 优先用直接标注而不是编号标注 | 可视化设计 | 🔠 | 缩短阅读标注的路径（图-编号-编号-标注），提高阅读效率，空间不足或数据过于复杂时除外 | III | 5 | 98 |
 |5| 使用多个子图的组合布局时，应注意同一方向上使用范围一致的 scale  | 可视化设计 | 🔢 | 例如横向多个图并列时，y轴的范围应一致，否则y方向上单位长度表示的值不同，难以比较 | III | 5 | 103 |
@@ -101,12 +106,18 @@ V. Tufte, Edward R., 1942- author. Seeing with Fresh Eyes : Meaning, Space, Data
 20. (same as above)
 21. Table usually outperform graphics in reporting on small data sets of 20 numbers or less.
 22. Sometimes decoration can help editorialize about the substance of the graphic. But it is wrong to distort the data measures -- the ink locating values of numbers -- in order to make an editorial comment or fit a decorative scheme.
+23. The representation of numbers, as physically measured on the surface of the graphic ifself, should be directly proportional to the numberical quantities represented.
+24. Clear, detailed, and thorough labeling should be used to defeat graphical distortion and ambiguity. Write out explanations of the data on the graphic itself. Label important events in the data.
+25. Show data variation, not design variation.
+26. The number of information-carrying (variable) dimensions depicted should not exceed the number of dimensions in the data.
+27. Graphics must not quote data out of context.
+
     
    
 ### For Guidelines/Strategies
 
-1. Choose an aspect ratio that centers the absolute values of the slopes of selected line segments on 45 degree (III | 1 | 25); Variations in slopes are best detected when the slopes are around 45 degree（IV-Ch2-P60)
-2. economists agree that graphics depicting money over a period time should show inflation-adjusted (constant) monetary units
+1. Choose an aspect ratio that centers the absolute values of the slopes of selected line segments on 45 degree (III | 1 | 25); Variations in slopes are best detected when the slopes are around 45 degree（IV | 2 | P60)
+2. economists agree that graphics depicting money over a period time should show inflation-adjusted (constant) monetary units; (III | 3 | 70) In time-series displays of money, deflated and standardized units of monetary measurement are nearly always better than nominal units. (I | 2 | 77)
 3. Calming the grid down clarifies the imprisoned data, as in these cases (right and below) of statistical graphics, spreadsheet entries, and visual timetables.
 4. a code connects image and label: image->number->number->noun or, reading the other direction, noun->number->number->image...Such codes prevent us from seeing each part and its name right together, an efficient merger which assists our memory. In short, codes obstruct parallelism; replacing codes with direct labels unifies the information. Codes and keys are sometimes necessary for highly complex data (geological field maps, for example), or when there are a great many scattered elements (the photograph of 146 astronomers on the next page)
 5. a regrettable lack of parallelism in the vertical scales of death rates for men and women. Equal vertical distances represent different quantities, which make visual comparisons of slopes (rates of change) between the two graphs most difficult...
